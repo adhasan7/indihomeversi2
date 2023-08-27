@@ -1,0 +1,400 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: rgb(128, 128, 128);
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+  list-style: none;
+}
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  border: none;
+  outline: none;
+  background: inherit;
+}
+.container {
+  margin: 0 2rem;
+  margin-bottom: 30rem;
+}
+.fill-gap {
+  height: auto;
+  flex: 1;
+}
+.merah {
+  color: red;
+}
+.block {
+  width: 100%;
+  display: inline-block !important;
+}
+
+nav {
+  color: white !important;
+  background: linear-gradient(
+    to right,
+    rgb(237, 51, 37),
+    rgb(237, 51, 37),
+    rgb(237, 51, 37),
+    rgba(237, 51, 37),
+    rgba(237, 51, 37)
+  );
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+nav img {
+  width: 30%;
+  max-width: 100px;
+  height: 100%;
+  margin-left: 8rem;
+  object-fit: contain;
+}
+nav ul {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li a {
+  font-size: 15px;
+}
+nav button {
+  color: white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background 0.5s;
+}
+nav button:hover {
+  background: rgb(224, 0, 0);
+}
+nav button:active {
+  background: rgb(190, 0, 0);
+}
+
+#mobile-menu {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  position: fixed;
+  top: -100%;
+  z-index: 99;
+  transition: top 0.5s;
+  background: linear-gradient(
+    to right,
+    rgb(237, 51, 37),
+    rgb(237, 51, 37),
+    rgb(237, 51, 37),
+    rgba(237, 51, 37),
+    rgba(237, 51, 37)
+  );
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+#mobile-menu li {
+  width: 100%;
+}
+#mobile-menu li a {
+  color: white;
+  text-decoration: none;
+  background: inherit;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: block;
+  border-radius: 1rem;
+}
+#mobile-menu li a:active {
+  background: darkred;
+}
+
+header {
+  min-height: 100vh;
+  position: relative;
+}
+header,video {
+  height: 110vh;
+}
+header video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header::before {
+  content: "";
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+header > div {
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+header div p {
+  width: 100%;
+  max-width: 800px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+header div button {
+  padding: 1rem 2rem;
+  margin: 0 1rem;
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+header div button:hover {
+  color: white;
+  background: inherit;
+}
+header div .fill-gap.provider {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 4px;
+  margin-right: 40rem;
+  margin-bottom: 12rem;
+}
+header div .fill-gap.provider img {
+  object-fit: contain;
+  object-position: center;
+  width: auto;
+  height: auto;
+  margin-right: 20px;
+
+}
+.fill-gap > .fill-gap.provider img {
+  margin-top: 60rem;
+
+}
+
+.fill-gap.provider img:nth-child(1){
+  width: 20% !important;
+  border: 1px solid black;
+}
+.fill-gap.provider {
+  padding-bottom: 9rem;
+  width: auto;
+  height: auto;
+  border: 1px solid black;
+}
+#fill-gap-art {
+  margin-top: 20rem;
+}
+#fill-gap-pic{
+  margin-top: 6rem;
+}
+
+
+#about {
+  text-align: center;
+  padding: 5% 2%;
+  margin-bottom: 9rem;
+}
+#about > * {
+  margin-bottom: 2rem;
+}
+#about > h2 {
+  font-size: xx-large;
+  font-weight: normal;
+}
+#about > p {
+  letter-spacing: 1px;
+  line-height: 1.25rem;
+}
+
+#about article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 2rem;
+}
+#about article .card {
+  flex: 1;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 2rem;
+  position: relative;
+  top: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+#about article .card img {
+  width: auto;
+  height: auto;
+  margin-bottom: 2rem;
+}
+#about article .card p {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+#about article .card p span {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+#about article .card:hover {
+  top: -10px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* untuk layar desktop */
+@media screen and (min-width: 700px) {
+  #mobile-menu {
+    display: none;
+  }
+  nav ul {
+    align-self: stretch;
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  nav ul li {
+    height: 100%;
+    display: grid;
+  }
+  nav ul li a {
+    place-self: center;
+    color: #FAC9C6;
+    text-decoration: none;
+    background: inherit;
+    padding: 1rem;
+    border-radius: 50px;
+  }
+  nav ul li a:hover {
+      color: white;
+      cursor: pointer;
+  }
+  /* higher specify selector */
+  nav button.btn-circle {
+    display: none;
+  }
+
+  #about article {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 7500px) {
+  #mobile-menu {
+    display: none;
+  }
+  nav ul {
+    align-self: stretch;
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  nav ul li {
+    height: 100%;
+    display: grid;
+  }
+  nav ul li a {
+    place-self: center;
+    color: white;
+    text-decoration: none;
+    background: inherit;
+    padding: 1rem;
+    border-radius: 50px;
+  }
+  nav ul li a:hover {
+    background: rgb(224, 0, 0);
+  }
+  /* higher specify selector */
+  nav button.btn-circle {
+    display: none;
+  }
+
+  #about article {
+    flex-direction: row;
+  }
+  
+  header {
+    min-height: auto;
+    position: relative;
+  }
+header,video {
+  height: auto;
+  }
+  header > #fill-gap-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:  1px solid white;
+    width: auto;
+    height: auto;
+  }
+  header {
+    position: relative;
+  }
+  .fill-gap.provider {
+    /* padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 10em; */
+    border: 1px solid yellow;
+    color: black;
+    left: 20em;
+  }
+  .fill-gap-pic {
+    position: absolute;
+    bottom: 23rem;
+
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 10em;
+    border: 1px solid black;
+    left: 20em;
+
+
+  }
+}
